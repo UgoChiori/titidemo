@@ -1,0 +1,417 @@
+:root {
+  background: #000;
+  color: #fff;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), 
+    url('/images/titi.jpg'); 
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+.hamburger {
+  width: 35px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.get-in-touch {
+  background: white;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  font-size: 16vw;
+  font-weight: 900;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+}
+
+.transition-text {
+  padding: 20vh 10vw;
+  background: #000;
+  text-align: center;
+}
+
+.impact-words {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sub-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.work-grid-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  /* This forces a single straight line */
+  padding-bottom: 20vh;
+  background: #000;
+}
+
+.work-box {
+  width: 22vw;
+  height: 50vh;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+
+  
+}
+
+.work-box h3 {
+  color: #000;
+
+  margin: 0;
+}
+
+.box-inner h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.box-arrow {
+  font-size: 0.7rem;
+  color: #888;
+  display: block;
+  margin-top: 8px;
+}
+
+
+/* ABOUT SECTION */
+.about-full-img {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-full-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-text-content {
+  padding: 15vh 0; /* Vertical breathing room */
+  display: flex;
+  justify-content: center; /* Centers the container itself */
+  background: transparent; /* Let your background image show through */
+}
+
+.about-text-content p {
+  max-width: 650px; /* Limits line length for readability */
+  width: 90%;
+  text-align: left; /* Essential for long bios */
+  font-size: 1.15rem; /* Slightly larger for a premium feel */
+  line-height: 1.8; /* More space between lines */
+  color: rgba(255, 255, 255, 0.9); /* Pure white is too harsh; this is softer */
+  font-weight: 300;
+  white-space: pre-line; /* Respects the paragraph breaks in your HTML */
+}
+/* .about-text-content {
+  padding: 15vh 20vw;
+  text-align: center;
+
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+} */
+
+/* FIXED NAV LAYOUT */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 4%; /* Responsive padding */
+  z-index: 1000;
+  box-sizing: border-box; 
+}
+
+.nav-left, .nav-right { flex: 1; display: flex; align-items: center; }
+.nav-right { justify-content: flex-end; }
+.nav-center { font-weight: 800; letter-spacing: 2px; font-size: 0.9rem; }
+
+/* THE CIRCULAR HAMBURGER */
+.hamburger-circle {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hamburger-circle .line {
+  width: 18px;
+  height: 1.5px;
+  background: white;
+}
+
+/* THE BUTTON FIX */
+.get-in-touch {
+  background: white;
+  color: black;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap; 
+}
+
+/* WORK GRID SPACING */
+.work-grid-section {
+  padding: 10vh 0;
+  background: #000;
+}
+
+
+/* -------------------------
+   GLOBAL RESPONSIVE TWEAKS
+-------------------------- */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 18vw;
+  }
+
+  .impact-words {
+    font-size: 4rem;
+  }
+
+  .work-box {
+    width: 28vw;
+    height: 45vh;
+  }
+}
+
+/* -------------------------
+   TABLET (≤ 1024px)
+-------------------------- */
+@media (max-width: 1024px) {
+  /* NAV */
+  .fixed-nav {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .get-in-touch {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-title {
+    font-size: 20vw;
+  }
+
+  /* TRANSITION TEXT */
+  .transition-text {
+    padding: 15vh 8vw;
+  }
+
+  .impact-words {
+    font-size: 3.5rem;
+  }
+
+  .sub-text {
+    font-size: 1.05rem;
+  }
+
+  /* WORK GRID */
+  .work-grid-container {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 6vw 15vh;
+  }
+
+  .work-box {
+    width: 42vw;
+    height: 45vh;
+  }
+
+  /* ABOUT */
+  .about-text-content {
+    padding: 12vh 0;
+  }
+
+  .about-text-content p {
+    font-size: 1.05rem;
+  }
+}
+
+/* -------------------------
+   MOBILE (≤ 768px)
+-------------------------- */
+@media (max-width: 768px) {
+  /* NAV */
+  .nav-center {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .get-in-touch {
+    display: none; /* clean mobile nav */
+  }
+
+  /* HERO */
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-title {
+    font-size: 22vw;
+    text-align: center;
+  }
+
+  /* TRANSITION TEXT */
+  .transition-text {
+    padding: 12vh 6vw;
+  }
+
+  .impact-words {
+    font-size: 2.6rem;
+    line-height: 1.2;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  /* WORK GRID → STACK */
+  .work-grid-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 12vh;
+  }
+
+  .work-box {
+    width: 90vw;
+    height: 55vh;
+    padding: 24px;
+  }
+
+  /* ABOUT */
+  .about-full-img {
+    height: 70vh;
+  }
+
+  .about-text-content {
+    padding: 10vh 0;
+  }
+
+  .about-text-content p {
+    width: 92%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* -------------------------
+   SMALL MOBILE (≤ 480px)
+-------------------------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24vw;
+  }
+
+  .impact-words {
+    font-size: 2.2rem;
+  }
+
+  .work-box {
+    height: 50vh;
+  }
+}
