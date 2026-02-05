@@ -1,5 +1,5 @@
 :root {
-  background: #000;
+  background: #fff;
   color: #fff;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -183,7 +183,7 @@ body {
   padding: 15vh 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Keeps the V-axis dead center */
+  align-items: center; 
   background: transparent;
 }
 
@@ -194,9 +194,15 @@ body {
   font-weight: 300;
   margin-bottom: 30px;
   text-wrap: balance; 
+   max-width: 650px; 
+  width: 90%;
+    color: rgba(255, 255, 255, 0.9); 
+ 
+
+
 }
 
-.about-text-content {
+/* .about-text-content {
   padding: 15vh 0; 
   display: flex;
   justify-content: center;
@@ -212,7 +218,7 @@ body {
   color: rgba(255, 255, 255, 0.9); 
   font-weight: 300;
   white-space: pre-line; 
-}
+} */
 
 .fixed-nav {
 
