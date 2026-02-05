@@ -165,57 +165,16 @@ body {
   font-weight: 400;
 }
 
-/* Hover effect for a little extra 'oomph' */
+
 .work-box:hover .box-link {
   color: #fff;
   transform: translateX(5px);
   transition: all 0.3s ease;
 }
-.img-news  { background-image: url('images/titi2.jpg'); }
-.img-blog  { background-image: url('images/blog1.jpeg'); }
-.img-work  { background-image: url('images/TA2.jpg'); }
-.img-talks { background-image: url('images/ta3.jpg'); }
-/* .work-grid-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-
-  padding-bottom: 20vh;
-  background: #000;
-}
-
-.work-box {
-  width: 22vw;
-  height: 50vh;
-  background: #fff;
-  border: 1px solid #333;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-sizing: border-box;  
-}
-
-.work-box h3 {
-  color: #000;
-
-  margin: 0;
-}
-
-.box-inner h3 {
-  font-size: 1.2rem;
-  margin: 0;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.box-arrow {
-  font-size: 0.7rem;
-  color: #888;
-  display: block;
-  margin-top: 8px;
-} */
+.img-news  { background-image: url('/images/titi2.jpg'); }
+.img-blog  { background-image: url('/images/blog1.jpeg'); }
+.img-work  { background-image: url('/images/TA2.jpg'); }
+.img-talks { background-image: url('/images/ta3.jpg'); }
 
 
 /* ABOUT SECTION */
