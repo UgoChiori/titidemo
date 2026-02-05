@@ -340,15 +340,37 @@ html {
    MOBILE (≤ 768px)
 -------------------------- */
 @media (max-width: 768px) {
-  /* NAV */
+ @media (max-width: 768px) {
+  .fixed-nav {
+    height: 60px; /* Slimmer nav on mobile */
+    padding: 0 5%;
+  }
+
   .nav-center {
+    font-size: 0.75rem; /* Slightly smaller text for the name */
+    letter-spacing: 1px;
+  }
+
+  .hamburger-circle {
+    width: 38px; /* Scale down the circle */
+    height: 38px;
+  }
+
+  .get-in-touch {
+    padding: 8px 16px; /* Smaller button */
+    font-size: 11px;
+  }
+}
+
+
+  /* .nav-center {
     font-size: 0.75rem;
     letter-spacing: 1.5px;
   }
 
   .get-in-touch {
-    display: none; /* clean mobile nav */
-  }
+    display: none; 
+  } */
 
   /* HERO */
   .hero {
@@ -407,7 +429,7 @@ html {
 /* -------------------------
    SMALL MOBILE (≤ 480px)
 -------------------------- */
-@media (max-width: 480px) {
+
   .hero-title {
     font-size: 24vw;
   }
@@ -420,4 +442,14 @@ html {
     height: 38vh;
     padding: 18px;
   }
+  @media (max-width: 480px) {
+  /* On very small screens, we hide the button text and just show an arrow or icon if needed, 
+     but for now, let's just make it a 'Contact' pill to save space */
+  .get-in-touch {
+    padding: 8px 12px;
+  }
+  
+  /* If the name is still too long, we hide the right side to keep it clean */
+  /* .nav-right { display: none; } */
 }
+
