@@ -2,13 +2,14 @@
   background: #000;
   color: #fff;
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), 
-    url('/images/titi.jpg'); 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/images/titi.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   font-family: 'Inter', sans-serif;
 }
+
 
 body {
   margin: 0;
@@ -108,13 +109,78 @@ body {
   line-height: 1.6;
   text-align: center;
 }
-
 .work-grid-container {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
-  /* This forces a single straight line */
+
+  padding-bottom: 20vh;
+  background: #000;
+}
+.work-box {
+  /* Your existing width, height, and display: flex; */
+    width: 22vw;
+  height: 50vh;
+  display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Text at the bottom */
+  padding: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Darken the image slightly so text stands out */
+.work-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.work-box h3 {
+  position: relative;
+  z-index: 2; /* Sits above the gradient */
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.box-link {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  margin-top: 8px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+/* Hover effect for a little extra 'oomph' */
+.work-box:hover .box-link {
+  color: #fff;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+.img-news  { background-image: url('images/titi2.jpg'); }
+.img-blog  { background-image: url('images/blog1.jpeg'); }
+.img-work  { background-image: url('images/TA2.jpg'); }
+.img-talks { background-image: url('images/ta3.jpg'); }
+/* .work-grid-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
   padding-bottom: 20vh;
   background: #000;
 }
@@ -149,7 +215,7 @@ body {
   color: #888;
   display: block;
   margin-top: 8px;
-}
+} */
 
 
 /* ABOUT SECTION */
@@ -363,14 +429,7 @@ html {
 }
 
 
-  /* .nav-center {
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-  }
 
-  .get-in-touch {
-    display: none; 
-  } */
 
   /* HERO */
   .hero {

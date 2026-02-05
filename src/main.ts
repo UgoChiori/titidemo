@@ -29,7 +29,19 @@ gsap.to(".hero-title", {
   ease: "none"
   // y: -100
 });
-
+// SOFT REVEAL FOR THE ABOUT SECTION
+gsap.from(".about-section", {
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 85%", // Starts when the top of the section is 85% down the screen
+    end: "top 50%",   // Finishes by the time it reaches the middle
+    scrub: 1.5,       // Links the animation to scroll speed for a "soft" feel
+  },
+  opacity: 0,
+  y: 50,              // Moves up 50px into its final position
+  duration: 1.2,
+  ease: "power2.out"
+});
 // FULL IMAGE ZOOM PARALLAX
 gsap.from(".about-full-img img", {
   scrollTrigger: {
@@ -53,6 +65,18 @@ gsap.to(".impact-words", {
   filter: "blur(15px)",    // Blurs out for that "dreamy" transition
   opacity: 0,              // Fades away
   ease: "power2.inOut"
+});
+
+gsap.from(".about-text-content p", {
+  scrollTrigger: {
+    trigger: ".about-text-content",
+    start: "top 90%",
+    toggleActions: "play none none reverse" 
+  },
+  opacity: 0,
+  y: 20,
+  duration: 1,
+  ease: "power3.out"
 });
 // // Fade in the transition text
 // gsap.from(".text-wrap", {
