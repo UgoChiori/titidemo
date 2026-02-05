@@ -85,6 +85,8 @@ body {
   z-index: 2;
   position: relative;
   margin: 0;
+  opacity: 0;
+  will-change: opacity;
 }
 
 .transition-text {
@@ -203,18 +205,18 @@ body {
   line-height: 1.8;
   font-weight: 300;
   margin-bottom: 30px;
-  text-wrap: balance; /* Prevents single words on a new line */
+  text-wrap: balance; 
 }
 
 .about-text-content {
-  padding: 15vh 0; /* Vertical breathing room */
+  padding: 15vh 0; 
   display: flex;
-  justify-content: center; /* Centers the container itself */
-  background: transparent; /* Let your background image show through */
+  justify-content: center;
+  background: transparent; 
 }
 
 .about-text-content p {
-  max-width: 650px; /* Limits line length for readability */
+  max-width: 650px; 
   width: 90%;
   text-align: left; /* Essential for long bios */
   font-size: 1.15rem; /* Slightly larger for a premium feel */
@@ -441,6 +443,7 @@ html {
     width: 92%;
     font-size: 1rem;
     line-height: 1.7;
+    /* box-sizing: border-box; */
   }
 }
 
