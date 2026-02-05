@@ -41,18 +41,30 @@ gsap.from(".about-full-img img", {
   scale: 1.4,
   ease: "none"
 });
-
-// Fade in the transition text
-gsap.from(".text-wrap", {
+// TRANSITION TEXT ANIMATION
+gsap.to(".impact-words", {
   scrollTrigger: {
     trigger: ".transition-text",
-    start: "top 80%",
-    end: "top 20%",
-    scrub: true,
+    start: "top center",   // Starts when the text hits the middle of the screen
+    end: "bottom top",     // Ends when the text leaves the top
+    scrub: 1,              // Smoothly follows the scroll
   },
-  opacity: 0,
-  y: 50,
+  scale: 1.8,              // Grows larger as you scroll
+  filter: "blur(15px)",    // Blurs out for that "dreamy" transition
+  opacity: 0,              // Fades away
+  ease: "power2.inOut"
 });
+// // Fade in the transition text
+// gsap.from(".text-wrap", {
+//   scrollTrigger: {
+//     trigger: ".transition-text",
+//     start: "top 80%",
+//     end: "top 20%",
+//     scrub: true,
+//   },
+//   opacity: 0,
+//   y: 50,
+// });
 
 // Parallax the boxes so they move at different speeds while scrolling
 gsap.to(".pos-up", {

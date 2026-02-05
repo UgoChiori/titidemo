@@ -128,10 +128,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  box-sizing: border-box;
-
-
-  
+  box-sizing: border-box;  
 }
 
 .work-box h3 {
@@ -168,30 +165,42 @@ body {
   object-fit: cover;
 }
 .about-text-content {
-  padding: 15vh 0; /* Vertical breathing room */
+  padding: 15vh 0;
   display: flex;
-  justify-content: center; /* Centers the container itself */
-  background: transparent; /* Let your background image show through */
+  flex-direction: column;
+  align-items: center; /* Keeps the V-axis dead center */
+  background: transparent;
 }
 
 .about-text-content p {
-  max-width: 650px; /* Limits line length for readability */
-  width: 90%;
-  text-align: left; /* Essential for long bios */
-  font-size: 1.15rem; /* Slightly larger for a premium feel */
-  line-height: 1.8; /* More space between lines */
-  color: rgba(255, 255, 255, 0.9); /* Pure white is too harsh; this is softer */
-  font-weight: 300;
-  white-space: pre-line; /* Respects the paragraph breaks in your HTML */
-}
-/* .about-text-content {
-  padding: 15vh 20vw;
   text-align: center;
-
-  font-size: 1rem;
-  line-height: 1.6;
   color: #fff;
-} */
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-wrap: balance; /* Prevents single words on a new line */
+}
+
+/* TOP of the V: Widest */
+.about-text-content p:nth-child(1) {
+  max-width: 900px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* MIDDLE of the V: Narrower */
+.about-text-content p:nth-child(2),
+.about-text-content p:nth-child(3) {
+  max-width: 700px;
+  font-size: 1.1rem;
+}
+
+/* POINT of the V: Narrowest */
+.about-text-content p:last-child {
+  max-width: 500px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
 
 /* FIXED NAV LAYOUT */
 .fixed-nav {
